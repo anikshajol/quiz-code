@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./Header.css";
+import "./Nav.css";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
-const Header = () => {
+const Nav = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="bg-blue-100 py-4 font-bold">
@@ -56,4 +56,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Nav;
