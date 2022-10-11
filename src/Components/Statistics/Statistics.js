@@ -15,8 +15,13 @@ const Statistics = () => {
   const data = total.data;
   console.log(data);
   return (
-    <div className="mt-12 w-full">
-      <LineChart className="text-center" width={500} height={500} data={data}>
+    <div className="mt-12 w-96 overflow-hidden">
+      <LineChart
+        className="text-center w-11"
+        width={500}
+        height={500}
+        data={data}
+      >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />

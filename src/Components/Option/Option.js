@@ -20,7 +20,7 @@ const Option = ({ ques }) => {
 
   return (
     <div className="">
-      <div className="card w-[750px] glass p-5">
+      <div className="card w-96 md:w-[750px] glass p-5">
         <section className="flex justify-between">
           <div className="">
             <h2 className="text-center text-xl font-semibold">{question}</h2>

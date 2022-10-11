@@ -4,7 +4,6 @@ import Home from "./Components/Home/Home";
 import Statistics from "./Components/Statistics/Statistics";
 import Blog from "./Components/Blog/Blog";
 import Main from "./Layouts/Main";
-import Topics from "./Components/Topics/Topics";
 import Quiz from "./Components/Quiz/Quiz";
 import ErrorPage from "./Components/ErrorElements/ErrorPage";
 
