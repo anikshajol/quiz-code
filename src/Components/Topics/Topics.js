@@ -1,7 +1,10 @@
 import React from "react";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Topics = ({ topic }) => {
-  const { name, logo } = topic;
+  const { name, logo, id } = topic;
+  const data = useLoaderData();
+  const quiz = data.data;
 
   return (
     <div className="px-3 md:px-0 md:mr-5 mt-7">
@@ -13,7 +16,9 @@ const Topics = ({ topic }) => {
           <h2 className="card-title">{name}</h2>
 
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Learn now!</button>
+            <Link to={`/home/${id}`}>
+              <button className="btn btn-primary">Learn now!</button>
+            </Link>
           </div>
         </div>
       </div>

@@ -55,7 +55,6 @@ const Nav = () => {
           </div>
         </nav>
       </div>
-      <Header></Header>
     </>
   );
 };
