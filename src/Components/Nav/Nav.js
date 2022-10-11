@@ -16,14 +16,14 @@ const Nav = () => {
           </section>
           <section
             className={`inline-block nav text-2xl bg-orange-200 p-2 w-full  md:bg-blue-100 text-center md:text-right md:static absolute right-[1px] md:right-0  top-16 duration-1000 ease-in-out ${
-              open ? "top-5 " : "top-[-520px]"
+              open ? "top-12 " : "top-[-520px]"
             }`}
           >
             <NavLink
               className={({ isActive }) =>
                 isActive
                   ? "md:active bg-blue-800 text-white font-semibold rounded-md p-1"
-                  : undefined
+                  : "hover:text-blue-900 hover:font-semibold hover:text-2xl"
               }
               to="/home"
             >
@@ -34,7 +34,7 @@ const Nav = () => {
               className={({ isActive }) =>
                 isActive
                   ? "md:active bg-blue-800 text-white font-semibold rounded-md p-1"
-                  : undefined
+                  : "hover:text-blue-900 hover:font-semibold hover:text-2xl"
               }
               to="/statistics"
             >
@@ -45,7 +45,7 @@ const Nav = () => {
               className={({ isActive }) =>
                 isActive
                   ? "md:active bg-blue-800 text-white font-semibold rounded-md p-1"
-                  : undefined
+                  : "hover:text-blue-900 hover:font-semibold hover:text-2xl"
               }
               to="/blog"
             >
