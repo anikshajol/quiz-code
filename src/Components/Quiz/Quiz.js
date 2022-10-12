@@ -5,7 +5,7 @@ import Option from "../Option/Option";
 const Quiz = () => {
   const data = useLoaderData();
   const quiz = data.data;
-  console.log(quiz);
+
   const { questions, name } = quiz;
 
   return (

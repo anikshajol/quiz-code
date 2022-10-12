@@ -4,9 +4,6 @@ import swal from "sweetalert";
 
 const Option = ({ ques }) => {
   const { question, id, correctAnswer, options } = ques;
-  const [a, b, c, d] = options;
-  console.log(a);
-  console.log(correctAnswer);
 
   const handleClickCorrectAnswer = () => {
     swal(`Correct Answer: ${correctAnswer}`);

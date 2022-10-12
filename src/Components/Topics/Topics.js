@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 const Topics = ({ topic }) => {
   const { name, logo, id } = topic;
-  // const data = useLoaderData();
-  // const quiz = data.data;
 
   return (
     <div className="px-3 md:px-0 md:mr-5 mt-7">
