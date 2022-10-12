@@ -4,19 +4,21 @@ import swal from "sweetalert";
 
 const Option = ({ ques }) => {
   const { question, id, correctAnswer, options } = ques;
-  console.log(ques);
+  const [a, b, c, d] = options;
+  console.log(a);
+  console.log(correctAnswer);
 
   const handleClickCorrectAnswer = () => {
     swal(`Correct Answer: ${correctAnswer}`);
   };
 
-  //   const handleClickOption = () => {
-  //     if (correctAnswer === id) {
-  //       swal("correct");
-  //     } else {
-  //       swal("wrong");
-  //     }
-  //   };
+  const handleClickOption = (option) => {
+    if (option === correctAnswer) {
+      swal("Awesome! Your Answer is Correct.");
+    } else {
+      swal("Sorry! Your Answer is Incorrect.");
+    }
+  };
 
   return (
     <div className="">
@@ -37,6 +39,7 @@ const Option = ({ ques }) => {
             {options.map((option, idx) => (
               <div key={idx}>
                 <input
+                  onClick={() => handleClickOption(option)}
                   className="mr-2 w-10"
                   type="radio"
                   name={id}
