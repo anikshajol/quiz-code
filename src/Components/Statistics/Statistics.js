@@ -8,27 +8,39 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
+import "./Statistics.css";
 
 const Statistics = () => {
   const total = useLoaderData();
   const data = total.data;
-  console.log(data);
+
   return (
-    <div className="mt-12 w-96 overflow-hidden">
-      <LineChart
-        className="text-center w-11"
-        width={500}
-        height={500}
-        data={data}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line type="monotone" dataKey="total" stroke="#82ca9d" />
-      </LineChart>
+    <div className="total mt-12 container mx-auto">
+      <div className="total-container ">
+        <ResponsiveContainer width="100%">
+          <LineChart
+            className="text-center w-11"
+            width={500}
+            height={500}
+            data={data}
+            margin={{
+              top: 5,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Line type="monotone" dataKey="total" stroke="#82ca9d" />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };
